@@ -47,6 +47,7 @@ function newWord() {
     randomWord = randomWordArr(arr);
     //выводим в браузер currentWord
     wordReplacement(randomWord);
+    wordMistakes.textContent = 0;
 }
 
 //функция рандомного слова
