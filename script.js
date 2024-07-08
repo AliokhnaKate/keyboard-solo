@@ -3,11 +3,11 @@ const word = document.querySelector('.word');
 const span = word.querySelectorAll('span');
 const timer = document.querySelector('#timer');
 //правильные ответы
-let correctCount = document.querySelector('.correct-count');
+const correctCount = document.querySelector('.correct-count');
 //неправильные ответы
-let wrongCount = document.querySelector('.wrong-count');
+const wrongCount = document.querySelector('.wrong-count');
 //ошибки в текущем слове
-let wordMistakes = document.querySelector('.word-mistakes');
+const wordMistakes = document.querySelector('.word-mistakes');
 
 //массив
 const arr = [
@@ -26,7 +26,6 @@ wordReplacement(randomWord);
 
 
 document.addEventListener("keydown", function(event) {
-    console.log(randomWord[indexLetter])
     if (event.key === randomWord[indexLetter]) {
         symbolSuccess(randomWord[indexLetter]);
         indexLetter++;
@@ -52,7 +51,6 @@ function newWord() {
 
 //функция рандомного слова
 function randomWordArr(value) {
-    console.log(value.indexOf(value[0]))
     const minArr = value.indexOf(value[0]);
     const maxArr = value.indexOf(value[value.length - 1]);
     //индекс слова в массиве
