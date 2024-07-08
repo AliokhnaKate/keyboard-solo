@@ -69,15 +69,6 @@ function generateRandomValue(min, max) {
 
 //функция замены слова в браузере
 function wordReplacement(value) {
-    //console.log(randomWord.indexOf(randomWord[0]))
-    //currentIndex = randomWord.indexOf(randomWord[0]);
-    // indexLetter = 0;
-    // container.forEach(item => {
-    //     item.textContent = value[indexLetter];
-    //     word.children[indexLetter].className = 'b';
-    //     indexLetter++;
-    // })
-    // indexLetter = 0;
     let newWord = value.split('');
     newWord = newWord.map((char) => `<span>${char}</span>`);
     word.innerHTML = newWord.join('');
@@ -86,17 +77,12 @@ function wordReplacement(value) {
 
 //успешное нажатие клавиши
 function symbolSuccess() {
-    //value.className = 'c';
-    //console.log(word.children)
     word.children[indexLetter].className = 'c';
-    //span[indexLetter].className = 'c';
 }
 
 //неудачное нажатие клавиши
 function symbolFail() {
     word.children[indexLetter].className = 'w';
-    //span[indexLetter].className = 'c';
-    //кол-во ошибок в слове
     wordMistakes.textContent = ++wordMistakes.textContent;
     //кол-во неправильных слов
     wrongCount.textContent = ++wrongCount.textContent;
